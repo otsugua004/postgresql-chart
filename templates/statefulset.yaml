@@ -33,15 +33,6 @@ spec:
                   name: postgres-secret
                   key: password
           volumeMounts:
-            - name: postgres-data
+            - name: postgres-data-claim
               mountPath: /var/lib/pgsql/data
-  volumeClaimTemplates:
-    - metadata:
-        name: postgres-data
-      spec:
-        accessModes:
-          - {{ .Values.storage.accessMode }}
-        resources:
-          requests:
-            storage: {{ .Values.storage.size }}
-        volumeName: {{ .Values.storage.volumeName }}
+
