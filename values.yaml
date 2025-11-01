@@ -5,6 +5,7 @@ storage:
   path: /mnt/data/postgres
   accessMode: ReadWriteOnce
   volumeName: postgres-pv
+  storageClassName: gp3
 
 postgresql:
   image: registry.redhat.io/rhel8/postgresql-15

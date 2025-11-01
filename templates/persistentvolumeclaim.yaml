@@ -9,4 +9,6 @@ spec:
   resources:
     requests:
       storage: {{ .Values.storage.size }}
-  volumeName: {{ .Values.storage.volumeName }}
+  storageClassName: {{ .Values.storage.storageClassName }}  # Ajusta según tu clúster
+
+#  volumeName: {{ .Values.storage.volumeName }}
