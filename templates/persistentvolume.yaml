@@ -1,1 +1,13 @@
 #persistentvolume.yaml
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: {{ .Values.storage.volumeName }}
+spec:
+  capacity:
+    storage: {{ .Values.storage.size }}
+  accessModes:
+    - {{ .Values.storage.accessMode }}
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: {{ .Values.storage.path }}

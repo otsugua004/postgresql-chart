@@ -1,1 +1,13 @@
 #values.yaml
+replicaCount: 3
+storage:
+  size: 1Gi
+  path: /mnt/data/postgres
+  accessMode: ReadWriteOnce
+  volumeName: postgres-pv
+
+postgresql:
+  image: registry.redhat.io/rhel8/postgresql-15
+  database: myotsuguadb
+  user: admin
+  password: password
