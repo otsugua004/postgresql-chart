@@ -12,6 +12,5 @@ spec:
       targetPort: 5432
       nodePort: 30032
       protocol: TCP
-  clusterIP: NodePort
   selector:
     app: postgres
